@@ -1,28 +1,3 @@
-definition_version: 2
-entities:
-  streamlit_app:
-    type: streamlit
-    meta:
-      use_mixins:
-        - streamlit_shared
-    identifier:
-      name: PBMRHBPR9Q1KJ47_
-      database: SMOOTHIES
-      schema: PUBLIC
-mixins:
-  streamlit_shared:
-    artifacts:
-      - pyproject.toml
-      - SMOOTHIE streamlit_app.py
-      - .streamlit/config.toml
-    title: Custom Smoothie Order Form
-    query_warehouse: COMPUTE_WH
-    compute_pool: SYSTEM_COMPUTE_POOL_CPU
-    grants:
-      - privilege: USAGE
-        role: SYSADMIN
-        with_grant_option: true
-      - privilege: USAGE
-        role: ACCOUNTADMIN
-        with_grant_option: true
-    main_file: SMOOTHIE streamlit_app.py
+# requirements.txt
+snowflake-snowpark-python
+streamlit
